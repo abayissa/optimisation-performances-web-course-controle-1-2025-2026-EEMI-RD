@@ -22,7 +22,7 @@
 			<div class="flex flex-row items-center justify-center space-x-6">
 				{% for file in item.files %}
 					{% if loop.index0 != 0 %}
-						<img src="{{asset('img/' ~ file.filename_disk)}}" class="w-full max-h-14 object-cover">
+						<img src="{{asset('img/' ~ file.filename_disk)}}" class="w-full max-h-14 object-cover"loading="lazy">
 					{% endif%}
 				{% endfor%}
 			</div>
