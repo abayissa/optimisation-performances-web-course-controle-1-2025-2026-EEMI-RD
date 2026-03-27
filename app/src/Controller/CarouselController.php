@@ -15,7 +15,7 @@ final class CarouselController extends AbstractController
     #[Route('/carousel', name: 'app_carousel')]
     public function index(GalaxyRepository $galaxyRepository, ModelesRepository $modelesRepository, ModelesFilesRepository $modelesFilesRepository, DirectusFilesRepository $directusFilesRepository): Response
     {
-        $galaxies = $galaxyRepository->findAll();
+        $galaxies = $galaxyRepository->findBy([], null, 5);
         $carousel = [];
 
         foreach($galaxies as $galaxy) {
